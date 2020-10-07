@@ -14,6 +14,9 @@
 			<c:if test="${param.error != null}">
 				<i>Invalid username/password.</i>
 			</c:if>
+			<c:if test="${param.logout != null}">
+				<i>Successfully logged out.</i>
+			</c:if>
 			<br>
 			<label for="username">User name: </label><input id="username" type="text" name="username"/>
 			<label for="password">Password: </label><input id="password" type="text" name="password"/>
