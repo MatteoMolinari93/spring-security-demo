@@ -9,14 +9,15 @@
 	
 	<body>
 		<h2>Demo Home Page</h2>
-		<hr>
 		Welcome!
-		
 		<hr>
 		User: <security:authentication property="principal.username" />
 		<hr>
 		Roles: <security:authentication property="principal.authorities"/>
-		
+		<hr>
+		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		<hr>
+		<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
 		<br>
 		<form:form action="${pageContext.request.contextPath}/logout" 
 				method="POST">
