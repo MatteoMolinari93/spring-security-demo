@@ -14,10 +14,14 @@
 		User: <security:authentication property="principal.username" />
 		<hr>
 		Roles: <security:authentication property="principal.authorities"/>
-		<hr>
-		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		<security:authorize access="hasRole('MANAGER')">
+			<hr>
+			<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		</security:authorize>
+		<security:authorize access="hasRole('ADMIN')">
 		<hr>
 		<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+		</security:authorize>
 		<br>
 		<form:form action="${pageContext.request.contextPath}/logout" 
 				method="POST">
