@@ -28,7 +28,8 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/leaders/**").hasRole("MANAGER")
 		.antMatchers("/systems/**").hasRole("ADMIN")
 		.and().formLogin().loginPage("/login").loginProcessingUrl("/authenticate").permitAll()
-		.and().logout().permitAll();
+		.and().logout().permitAll()
+		.and().exceptionHandling().accessDeniedPage("/access-denied");
 	}
 	
 }
