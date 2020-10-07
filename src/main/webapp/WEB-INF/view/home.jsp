@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Spring Security Demo Home pagwe</title>
+		<title>Spring Security Demo - Home page</title>
 	</head>
 	
 	<body>
